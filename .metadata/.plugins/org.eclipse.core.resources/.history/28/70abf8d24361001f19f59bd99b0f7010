@@ -1,0 +1,26 @@
+package com.jobseeker.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.jobseeker.beans.ApiResponse;
+import com.jobseeker.service.JobApplicationsService;
+
+@RestController
+public class JobApplicationsController {
+	
+	@Autowired
+	private JobApplicationsService jobApplicationsService;
+
+	@PostMapping("/apply/{jobId}/{jobseekerId}")
+	public ResponseEntity<ApiResponse> applyToJob(@PathVariable Long jobId, @PathVariable Long jobseekerId) throws Exception{
+		jobApplicationsService.applyToJob(jobId,jobseekerId);
+		ApiResponse response = new ApiResponse("Successfully applied for jobId : "+jobId,200);
+		return new ResponseEntity<ApiResponse>(response, HttpStatus.OK);
+	}
+	
+}

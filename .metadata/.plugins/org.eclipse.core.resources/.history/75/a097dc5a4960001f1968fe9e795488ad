@@ -1,0 +1,28 @@
+package com.job.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.job.beans.ApiResponse;
+import com.job.entity.Job;
+import com.job.service.JobService;
+
+@RestController
+public class JobController {
+
+	// Creating a JobService Instance to call service methods
+	@Autowired
+	private JobService jobService;
+	
+	// Controller for getting job details using jobId.
+	@GetMapping("/job/{jobId}")
+	public ResponseEntity<Job> getJobDetailsByJobId(@PathVariable("jobId") String jobId){
+		Job job = jobService.getJobDetailsByJobId(jobId);
+		return new ResponseEntity<Job>(job,HttpStatus.OK);
+	}
+	
+}

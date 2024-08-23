@@ -1,0 +1,5 @@
+package com.jobseeker.repository;
+
+public interface JobApplicationsRepository {
+
+}

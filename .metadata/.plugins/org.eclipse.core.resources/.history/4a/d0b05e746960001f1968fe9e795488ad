@@ -1,0 +1,15 @@
+package com.job.repository;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.job.entity.Job;
+
+@Repository
+public interface JobRepository extends JpaRepository<Job, Long> {
+	
+	List<Job> findAllByWorkingAreaAndWorkingExperienceAndJobLocation(String workingArea, Integer workingExperience, String jobLocation);
+	
+}

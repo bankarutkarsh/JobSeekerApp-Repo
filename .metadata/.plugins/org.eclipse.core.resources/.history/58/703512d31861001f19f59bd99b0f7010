@@ -1,0 +1,21 @@
+package com.jobseeker.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.jobseeker.entity.JobSeeker;
+import com.jobseeker.repository.JobseekerRepository;
+
+@Service
+public class JobseekerService {
+
+	@Autowired
+	private JobseekerRepository jobseekerRepository;
+
+	public void addJobseeker(JobSeeker jobseeker) {
+		jobseekerRepository.save(jobseeker);		
+	}
+	
+	
+	
+}

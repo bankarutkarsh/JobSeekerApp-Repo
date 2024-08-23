@@ -1,0 +1,27 @@
+package com.jobseeker.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.jobseeker.beans.ApiResponse;
+import com.jobseeker.entity.JobSeeker;
+import com.jobseeker.service.JobseekerService;
+
+@RestController
+public class JobseekerController {
+
+	@Autowired
+	private JobseekerService jobseekerService;
+	
+	@PostMapping("/jobseeker")
+	public ResponseEntity<ApiResponse> addJobseeker(@RequestBody JobSeeker jobseeker){
+		jobseekerService.addJobseeker(jobseeker);
+		ApiResponse response = new ApiResponse("Jobseeker profile added successfully.",200);
+		return new ResponseEntity<ApiResponse>(response, HttpStatus.OK);
+	}
+	
+}

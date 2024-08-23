@@ -1,0 +1,5 @@
+package com.jobseeker.service;
+
+public class JobseekerService {
+
+}

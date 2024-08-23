@@ -1,0 +1,37 @@
+package com.job.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.job.entity.Job;
+import com.job.service.JobService;
+
+@RestController
+public class JobController {
+
+	// Creating a JobService Instance to call service methods
+	@Autowired
+	private JobService jobService;
+	
+	// Controller mapping for finding job details using jobId.
+	@GetMapping("/job/{jobId}")
+	public ResponseEntity<Job> getJobDetailsByJobId(@PathVariable("jobId") Long jobId){
+		Job job = jobService.getJobDetailsByJobId(jobId);
+		return new ResponseEntity<Job>(job,HttpStatus.OK);
+	}
+	
+	
+	//Controller mapping for finding jobs list according to different parameters.
+	@GetMapping("/jobs")
+	public ResponseEntity<List<Job>> getJobListUsingCriteria(@RequestParam("workingArea") String workingArea, @RequestParam("workingExperience") Integer workingExperience, @RequestParam("jobLocation") String jobLocation){
+		List<Job> jobs = jobService.getJobListUsingCriteria(workingArea,workingExperience,jobLocation);
+		return new ResponseEntity<List<Job>>(jobs, HttpStatus.OK);
+	}
+}

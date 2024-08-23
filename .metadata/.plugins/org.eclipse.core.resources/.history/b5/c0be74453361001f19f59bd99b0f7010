@@ -1,0 +1,29 @@
+package com.jobseeker.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.jobseeker.entity.JobSeeker;
+import com.jobseeker.exception.JobSeekerIdNotFoundException;
+import com.jobseeker.repository.JobseekerRepository;
+
+@Service
+public class JobseekerService {
+
+	@Autowired
+	private JobseekerRepository jobseekerRepository;
+
+	public void addJobseeker(JobSeeker jobseeker) {
+		jobseekerRepository.save(jobseeker);		
+	}
+
+	public void updateJobseekerProfile(JobSeeker jobseeker, Long jobseekerId) throws JobSeekerIdNotFoundException {
+		JobSeeker profile = jobseekerRepository.findById(jobseekerId).orElse(null);
+		if(profile==null) throw new JobSeekerIdNotFoundException("Jobseeker id not found");
+		profile = jobseeker;
+		jobseekerRepository.save(profile);
+	}
+	
+	
+	
+}

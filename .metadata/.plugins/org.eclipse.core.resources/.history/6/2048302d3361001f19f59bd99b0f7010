@@ -1,0 +1,5 @@
+package com.jobseeker.beans;
+
+public class JobSeekerBean {
+
+}

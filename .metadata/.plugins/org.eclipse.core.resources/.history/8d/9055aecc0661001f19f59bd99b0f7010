@@ -1,0 +1,28 @@
+package com.jobseeker.entity;
+
+import java.time.LocalDate;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+
+@Entity
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
+public class JobApplications {
+	
+	private Integer applicationId;
+	private Integer jobId;
+	private LocalDate applicationDate;
+//	private String status;
+	
+	@ManyToOne
+	@JoinColumn(name = "jobseekerId")
+	private Integer jobseekerId; 
+}
