@@ -51,13 +51,13 @@ public class JobSeeker {
 	@NotNull
 	private String education;
 	@NotNull
-	@PositiveOrZero
+	@PositiveOrZero(message = "Cannot be a negative value")
 	private Integer experience;
 	@NotNull
-	@PositiveOrZero
+	@PositiveOrZero(message = "Cannot be a negative value")
 	private Long currentSalary;
 	@NotNull
-	@Positive
+	@Positive(message = "Cannot be a negative value or zero")
 	private Long expectedSalary;
 	@NotNull
 	private String skills;

@@ -1,5 +1,7 @@
 package com.jobseeker.service;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,14 +15,20 @@ public class JobseekerService {
 
 	@Autowired
 	private JobseekerRepository jobseekerRepository;
+	
+	Logger logger = LoggerFactory.getLogger(JobseekerService.class);
 
 	public void addJobseeker(JobSeeker jobseeker) {
-		jobseekerRepository.save(jobseeker);		
+		jobseekerRepository.save(jobseeker);
+		logger.info("Jobseeker Profile added successfully");
 	}
 
-	public void updateJobseekerProfile(JobSeekerBean jobseeker, Long jobseekerId) throws JobSeekerIdNotFoundException {
+	public void updateJobseekerProfile(JobSeekerBean jobseeker, Long jobseekerId) throws JobSeekerIdNotFoundException {		
 		JobSeeker profile = jobseekerRepository.findById(jobseekerId).orElse(null);
-		if(profile==null) throw new JobSeekerIdNotFoundException("No jobseeker profile found for jobseekerId : "+jobseekerId);
+		if(profile==null) {
+			logger.error("No jobseeker profile found for jobseekerId : "+jobseekerId);
+			throw new JobSeekerIdNotFoundException("No jobseeker profile found for jobseekerId : "+jobseekerId);
+		}
 		
 		if(jobseeker.getEmail() != null) {
 			profile.setEmail(jobseeker.getEmail());
@@ -48,6 +56,7 @@ public class JobseekerService {
 		}
 		
 		jobseekerRepository.save(profile);
+		logger.info("Job seeker profile updated successfully");
 	}
 	
 	

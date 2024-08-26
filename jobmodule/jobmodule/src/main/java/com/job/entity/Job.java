@@ -37,23 +37,23 @@ public class Job {
 	@NotNull
 	private String workingArea;   
 	@NotNull
-	@PositiveOrZero
+	@PositiveOrZero(message = "Cannot be a negative value")
 	private Integer workingExperience; // In Years
 	@NotNull
 	private String jobLocation;        // City name
 	@NotNull
 	private String jobType;
 	@NotNull
-	@Positive
+	@Positive(message = "Cannot be a negative value or Zero")
 	private Long salary;
 	@NotNull
 	private String requiredSkill;
 	@CreationTimestamp
 	private LocalDate postedDate;
 	@NotNull
-	@Future
+	@Future(message = "Must be a future Date")
 	private LocalDate applicationDeadline;
 	@NotNull
-	@Email
+	@Email(message = "Enter a correct email id")
 	private String contactEmail;
 }

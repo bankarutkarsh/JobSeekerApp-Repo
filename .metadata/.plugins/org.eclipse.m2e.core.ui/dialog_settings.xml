@@ -2,6 +2,8 @@
 <section name="Workbench">
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="D:\Wipro Capstone Project\JobSeekerApp\apigateway\apigateway"/>
+			<item value="D:\Wipro Capstone Project\JobSeekerApp\eurekaserver\eurekaserver"/>
 			<item value="D:\Wipro Capstone Project\JobSeekerApp\jobmodule\jobmodule"/>
 			<item value="D:\Wipro Capstone Project\JobSeekerApp\jobseekermodule\jobseekermodule"/>
 		</list>
