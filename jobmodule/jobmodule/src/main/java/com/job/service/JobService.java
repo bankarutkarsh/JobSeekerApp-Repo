@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.job.entity.Job;
+import com.job.exception.JobNotFoundException;
 import com.job.repository.JobRepository;
 
 @Service
@@ -16,18 +17,19 @@ public class JobService {
 	private JobRepository jobRepository;
 
 	// Service Method for finding job using jobId
-	public Job getJobDetailsByJobId(Long jobId) {
+	public Job getJobDetailsByJobId(Long jobId) throws JobNotFoundException {
 		Job job = jobRepository.findById(jobId).orElse(null);
-		// if(job==null) throw Exception.-------------------------------
+		if(job==null) throw new JobNotFoundException("No Job found for jobId : "+jobId);
 		return job;
 	}
 	
 	// Service Method for finding job using different criteria's
-	public List<Job> getJobListUsingCriteria(String workingArea, Integer workingExperience, String jobLocation, String requiredSkill) {
+	public List<Job> getJobListUsingCriteria(String workingArea, Integer workingExperience, String jobLocation, String requiredSkill) throws JobNotFoundException {
 		List<Job> jobs = jobRepository.findJobsByCriteria(workingArea, workingExperience, jobLocation);
-		// if(jobs.isEmpty()) throw Exception.-------------------------------
+		if(jobs.isEmpty()) throw new JobNotFoundException("No Job found for applied criteria");
 		
 		//filter according to job skills
+		
 		
 		return jobs;
 	}

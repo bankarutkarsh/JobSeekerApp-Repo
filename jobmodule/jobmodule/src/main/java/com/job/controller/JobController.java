@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.job.beans.ApiResponse;
 import com.job.entity.Job;
+import com.job.exception.JobNotFoundException;
 import com.job.service.JobService;
 
 @RestController
@@ -25,7 +26,7 @@ public class JobController {
 
 	// Controller mapping for finding job details using jobId.
 	@GetMapping("/job/{jobId}")
-	public ResponseEntity<Job> getJobDetailsByJobId(@PathVariable("jobId") Long jobId) {
+	public ResponseEntity<Job> getJobDetailsByJobId(@PathVariable("jobId") Long jobId) throws JobNotFoundException {
 		Job job = jobService.getJobDetailsByJobId(jobId);
 		return new ResponseEntity<Job>(job, HttpStatus.OK);
 	}
@@ -36,7 +37,7 @@ public class JobController {
 			@RequestParam(value = "workingArea", required = false) String workingArea,
 			@RequestParam(value = "workingExperience", required = false) Integer workingExperience,
 			@RequestParam(value = "jobLocation", required = false) String jobLocation,
-			@RequestParam(value = "requiredSkill", required = false) String requiredSkill) {
+			@RequestParam(value = "requiredSkill", required = false) String requiredSkill) throws JobNotFoundException {
 		List<Job> jobs = jobService.getJobListUsingCriteria(workingArea, workingExperience, jobLocation,requiredSkill);	
 		return new ResponseEntity<List<Job>>(jobs, HttpStatus.OK);
 	}

@@ -11,6 +11,7 @@ import com.jobseeker.beans.JobBean;
 import com.jobseeker.entity.JobApplications;
 import com.jobseeker.entity.JobSeeker;
 import com.jobseeker.exception.JobDeadLinePassedException;
+import com.jobseeker.exception.JobNotAppliedException;
 import com.jobseeker.exception.JobNotFoundException;
 import com.jobseeker.exception.JobSeekerIdNotFoundException;
 import com.jobseeker.repository.JobApplicationsRepository;
@@ -31,19 +32,23 @@ public class JobApplicationsService {
 	private RestTemplate restTemplate;
 
 	@Transactional
-	public void applyToJob(Long jobId, Long jobseekerId)
-			throws JobSeekerIdNotFoundException, JobNotFoundException, JobDeadLinePassedException {
+	public void applyToJob(Long jobId, Long jobseekerId) throws JobSeekerIdNotFoundException, JobNotFoundException,
+			JobDeadLinePassedException, JobNotAppliedException {
 		JobSeeker jobseeker = jobseekerRepository.findById(jobseekerId).orElse(null);
 		if (jobseeker == null)
 			throw new JobSeekerIdNotFoundException("No jobseeker profile found for jobseekerId : " + jobseekerId);
 
-		JobBean job = restTemplate.getForObject("http://localhost:8085/job/" + jobId, JobBean.class);
+		JobBean job = restTemplate.getForObject("http://localhost:8085/app1/job/" + jobId, JobBean.class);
 
 		if (job == null)
 			throw new JobNotFoundException("No job found for jobId : " + jobId);
 
 		if (job.getApplicationDeadline().isBefore(LocalDate.now()))
 			throw new JobDeadLinePassedException("Sorry, cannot apply as application Deadline is crossed");
+
+		if (job.getWorkingExperience() > jobseeker.getExperience())
+			throw new JobNotAppliedException(
+					"Experience required for job : " + job.getWorkingExperience() + " years does not match your experience : " + jobseeker.getExperience() + " years.");
 
 		JobApplications jobApplication = new JobApplications();
 
@@ -63,8 +68,10 @@ public class JobApplicationsService {
 		if (applications.isEmpty())
 			throw new JobNotFoundException("No jobs applied by jobseeker with id : " + jobseekerId);
 
-		
-		
+		for (JobApplications application : applications) {
+			application.setJobseeker(null);
+		}
+
 		return applications;
 	}
 

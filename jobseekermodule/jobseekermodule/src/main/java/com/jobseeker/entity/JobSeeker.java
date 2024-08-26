@@ -60,7 +60,6 @@ public class JobSeeker {
 	@Positive
 	private Long expectedSalary;
 	@NotNull
-	@Pattern(regexp = "^[^\\s,]+(,[^\\s,]+)*$", message = "Skills must be comma-separated without spaces")
 	private String skills;
 
 	@OneToMany(mappedBy = "jobseeker")

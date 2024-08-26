@@ -23,6 +23,12 @@ public class GlobalExceptionHandler {
 		return new ResponseEntity<ApiResponse>(response, HttpStatus.NOT_FOUND);
 	}
 
+	@ExceptionHandler(JobNotAppliedException.class)
+	public ResponseEntity<ApiResponse> handleJobNotAppliedException(JobNotAppliedException exception){
+		ApiResponse response = new ApiResponse(exception.getMessage(),404);
+		return new ResponseEntity<ApiResponse>(response, HttpStatus.NOT_FOUND);
+	}
+	
 	@ExceptionHandler(JobNotFoundException.class)
 	public ResponseEntity<ApiResponse> handleJobNotFoundException(JobNotFoundException exception){
 		ApiResponse response = new ApiResponse(exception.getMessage(),404);

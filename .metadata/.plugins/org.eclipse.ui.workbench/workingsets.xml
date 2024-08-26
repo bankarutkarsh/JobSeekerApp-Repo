@@ -8,5 +8,11 @@
 <workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1724239463513_4" label="jobmodule" name="jobmodule">
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/jobmodule" type="4"/>
 </workingSet>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1724649600167_5" label="eurekaserver" name="eurekaserver">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/eurekaserver" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1724651888593_6" label="apigateway" name="apigateway">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/apigateway" type="4"/>
+</workingSet>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1724239040867_2" label="Window Working Set" name="Aggregate for window 1724239040867"/>
 </workingSetManager>

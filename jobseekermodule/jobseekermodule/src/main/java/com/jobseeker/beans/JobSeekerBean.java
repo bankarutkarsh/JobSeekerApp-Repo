@@ -29,7 +29,7 @@ public class JobSeekerBean {
 	private Long currentSalary;
 	@Positive
 	private Long expectedSalary;
-	@Pattern(regexp = "^[^\\s,]+(,[^\\s,]+)*$", message = "Skills must be comma-separated without spaces")
+	
 	private String skills;
 	
 }
