@@ -8,8 +8,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
-
 import com.jobseeker.beans.JobBean;
+import com.jobseeker.beans.ParamsBean;
 import com.jobseeker.entity.JobApplications;
 import com.jobseeker.entity.JobSeeker;
 import com.jobseeker.exception.JobDeadLinePassedException;
@@ -36,18 +36,18 @@ public class JobApplicationsService {
 	Logger logger = LoggerFactory.getLogger(JobApplicationsService.class);
 	
 	@Transactional
-	public void applyToJob(Long jobId, Long jobseekerId) throws JobSeekerIdNotFoundException, JobNotFoundException,
+	public void applyToJob(ParamsBean bean) throws JobSeekerIdNotFoundException, JobNotFoundException,
 			JobDeadLinePassedException, JobNotAppliedException {
-		JobSeeker jobseeker = jobseekerRepository.findById(jobseekerId).orElse(null);
+		JobSeeker jobseeker = jobseekerRepository.findById(bean.getJobseekerId()).orElse(null);
 		if (jobseeker == null) {
-			logger.error("No jobseeker profile found for jobseekerId : " + jobseekerId);
-			throw new JobSeekerIdNotFoundException("No jobseeker profile found for jobseekerId : " + jobseekerId);
+			logger.error("No jobseeker profile found for jobseekerId : " + bean.getJobseekerId());
+			throw new JobSeekerIdNotFoundException("No jobseeker profile found for jobseekerId : " + bean.getJobseekerId());
 		}
-		JobBean job = restTemplate.getForObject("http://localhost:8085/app1/job/" + jobId, JobBean.class);
+		JobBean job = restTemplate.getForObject("http://localhost:8081/app1/job/" + bean.getJobId(), JobBean.class);
 
 		if (job == null) {
-			logger.error("No job found for jobId : " + jobId);
-			throw new JobNotFoundException("No job found for jobId : " + jobId);
+			logger.error("No job found for jobId : " + bean.getJobId());
+			throw new JobNotFoundException("No job found for jobId : " + bean.getJobId());
 		}
 		
 		if (job.getApplicationDeadline().isBefore(LocalDate.now())) {
@@ -62,7 +62,7 @@ public class JobApplicationsService {
 		}
 			
 		for(JobApplications j : jobseeker.getAppliedJobs())
-			if(j.getJobId() == jobId) {
+			if(j.getJobId() == bean.getJobId()) {
 				logger.error("You have already applied for this job");
 				throw new JobNotAppliedException("You have already applied for this job");
 			}
@@ -70,11 +70,17 @@ public class JobApplicationsService {
 
 		JobApplications jobApplication = new JobApplications();
 
-		jobApplication.setJobId(jobId);
+		jobApplication.setJobId(bean.getJobId());
+		jobApplication.setJobTitle(job.getJobTitle());
+		jobApplication.setCompanyName(job.getCompanyName());
+		jobApplication.setJobLocation(job.getJobLocation());
+		jobApplication.setRequiredSkill(job.getRequiredSkill());
+		jobApplication.setContactEmail(job.getContactEmail());
+		jobApplication.setStatus("Applied");
 		jobApplication.setJobseeker(jobseeker);
 
 		jobApplicationsRepository.save(jobApplication);
-		logger.info("Successfully applied for the jobId : "+jobId);
+		logger.info("Successfully applied for the job = {} "+job);
 	}
 
 	public List<JobApplications> getAllAppliedJobsById(Long jobseekerId)

@@ -20,14 +20,14 @@ public class JobseekerService {
 
 	public void addJobseeker(JobSeeker jobseeker) {
 		jobseekerRepository.save(jobseeker);
-		logger.info("Jobseeker Profile added successfully");
+		logger.info("Jobseeker Profile added successfully. Profile Details = {}"+jobseeker);
 	}
 
-	public void updateJobseekerProfile(JobSeekerBean jobseeker, Long jobseekerId) throws JobSeekerIdNotFoundException {		
-		JobSeeker profile = jobseekerRepository.findById(jobseekerId).orElse(null);
+	public void updateJobseekerProfile(JobSeekerBean jobseeker) throws JobSeekerIdNotFoundException {		
+		JobSeeker profile = jobseekerRepository.findById(jobseeker.getJobseekerId()).orElse(null);
 		if(profile==null) {
-			logger.error("No jobseeker profile found for jobseekerId : "+jobseekerId);
-			throw new JobSeekerIdNotFoundException("No jobseeker profile found for jobseekerId : "+jobseekerId);
+			logger.error("No jobseeker profile found for jobseekerId : "+jobseeker.getJobseekerId());
+			throw new JobSeekerIdNotFoundException("No jobseeker profile found for jobseekerId : "+jobseeker.getJobseekerId());
 		}
 		
 		if(jobseeker.getEmail() != null) {
@@ -56,7 +56,7 @@ public class JobseekerService {
 		}
 		
 		jobseekerRepository.save(profile);
-		logger.info("Job seeker profile updated successfully");
+		logger.info("Job seeker profile updated successfully. Profile Details = {}" + profile);
 	}
 	
 	

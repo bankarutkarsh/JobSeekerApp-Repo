@@ -14,6 +14,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class JobSeekerBean {
+	private Long jobseekerId; 
 	@Email(message = "Enter a valid email address")
 	private String email;
 	@Pattern(regexp = "^[0-9]{10}$", message = "Enter valid Phone number exactly 10 digits ,e.g - 9037323325")
