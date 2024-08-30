@@ -17,12 +17,14 @@ public class JobseekerService {
 	private JobseekerRepository jobseekerRepository;
 	
 	Logger logger = LoggerFactory.getLogger(JobseekerService.class);
-
+	
+	// Service layer for creating a new jobSeeker profile
 	public void addJobseeker(JobSeeker jobseeker) {
 		jobseekerRepository.save(jobseeker);
 		logger.info("Jobseeker Profile added successfully. Profile Details = {}"+jobseeker);
 	}
 
+	// Service layer for updating a existing jobSeeker profile
 	public void updateJobseekerProfile(JobSeekerBean jobseeker) throws JobSeekerIdNotFoundException {		
 		JobSeeker profile = jobseekerRepository.findById(jobseeker.getJobseekerId()).orElse(null);
 		if(profile==null) {

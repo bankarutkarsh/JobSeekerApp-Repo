@@ -1,368 +1,230 @@
-2024-08-27T09:09:32.661+05:30  INFO 31368 --- [jobmodule] [restartedMain] com.job.JobmoduleApplication             : Starting JobmoduleApplication using Java 17.0.7 with PID 31368 (D:\Wipro Capstone Project\JobSeekerApp\jobmodule\jobmodule\target\classes started by HP in D:\Wipro Capstone Project\JobSeekerApp\jobmodule\jobmodule)
-2024-08-27T09:09:32.676+05:30  INFO 31368 --- [jobmodule] [restartedMain] com.job.JobmoduleApplication             : No active profile set, falling back to 1 default profile: "default"
-2024-08-27T09:09:32.792+05:30  INFO 31368 --- [jobmodule] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-08-27T09:09:32.793+05:30  INFO 31368 --- [jobmodule] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-08-27T09:09:34.794+05:30  INFO 31368 --- [jobmodule] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-08-27T09:09:35.154+05:30  INFO 31368 --- [jobmodule] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 338 ms. Found 1 JPA repository interface.
-2024-08-27T09:09:35.730+05:30  INFO 31368 --- [jobmodule] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=dcde960d-db8d-34ed-9a6e-ac95536a16ab
-2024-08-27T09:09:36.071+05:30  WARN 31368 --- [jobmodule] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
-2024-08-27T09:09:36.075+05:30  WARN 31368 --- [jobmodule] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
-2024-08-27T09:09:37.018+05:30  INFO 31368 --- [jobmodule] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8085 (http)
-2024-08-27T09:09:37.045+05:30  INFO 31368 --- [jobmodule] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-08-27T09:09:37.046+05:30  INFO 31368 --- [jobmodule] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
-2024-08-27T09:09:37.242+05:30  INFO 31368 --- [jobmodule] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/app1]   : Initializing Spring embedded WebApplicationContext
-2024-08-27T09:09:37.243+05:30  INFO 31368 --- [jobmodule] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4449 ms
-2024-08-27T09:09:37.584+05:30  INFO 31368 --- [jobmodule] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-08-27T09:09:37.736+05:30  INFO 31368 --- [jobmodule] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
-2024-08-27T09:09:37.821+05:30  INFO 31368 --- [jobmodule] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-08-27T09:09:38.518+05:30  INFO 31368 --- [jobmodule] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-08-27T09:09:38.586+05:30  INFO 31368 --- [jobmodule] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-08-27T09:09:38.964+05:30  INFO 31368 --- [jobmodule] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@73180eb9
-2024-08-27T09:09:38.968+05:30  INFO 31368 --- [jobmodule] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-08-27T09:09:39.088+05:30  WARN 31368 --- [jobmodule] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-08-27T09:09:40.934+05:30  INFO 31368 --- [jobmodule] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-08-27T09:09:41.035+05:30  INFO 31368 --- [jobmodule] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-08-27T09:09:41.495+05:30  INFO 31368 --- [jobmodule] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2024-08-27T09:09:42.675+05:30  WARN 31368 --- [jobmodule] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-08-27T09:09:43.615+05:30  WARN 31368 --- [jobmodule] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
-2024-08-27T09:09:44.277+05:30  INFO 31368 --- [jobmodule] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
-2024-08-27T09:09:44.363+05:30  WARN 31368 --- [jobmodule] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2024-08-27T09:09:44.416+05:30  INFO 31368 --- [jobmodule] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2024-08-27T09:09:44.469+05:30  INFO 31368 --- [jobmodule] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2024-08-27T09:09:44.478+05:30  INFO 31368 --- [jobmodule] [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T09:09:44.494+05:30  INFO 31368 --- [jobmodule] [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2024-08-27T09:09:44.495+05:30  INFO 31368 --- [jobmodule] [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2024-08-27T09:09:44.495+05:30  INFO 31368 --- [jobmodule] [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2024-08-27T09:09:44.495+05:30  INFO 31368 --- [jobmodule] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2024-08-27T09:09:44.495+05:30  INFO 31368 --- [jobmodule] [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2024-08-27T09:09:44.495+05:30  INFO 31368 --- [jobmodule] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2024-08-27T09:09:44.495+05:30  INFO 31368 --- [jobmodule] [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2024-08-27T09:09:45.265+05:30  INFO 31368 --- [jobmodule] [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2024-08-27T09:09:45.267+05:30  INFO 31368 --- [jobmodule] [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2024-08-27T09:09:45.271+05:30  INFO 31368 --- [jobmodule] [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2024-08-27T09:09:45.276+05:30  INFO 31368 --- [jobmodule] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1724729985273 with initial instances count: 0
-2024-08-27T09:09:45.283+05:30  INFO 31368 --- [jobmodule] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application JOBMODULE with eureka with status UP
-2024-08-27T09:09:45.284+05:30  INFO 31368 --- [jobmodule] [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1724729985284, current=UP, previous=STARTING]
-2024-08-27T09:09:45.287+05:30  INFO 31368 --- [jobmodule] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_JOBMODULE/OMEN:jobmodule:8085: registering service...
-2024-08-27T09:09:45.344+05:30  INFO 31368 --- [jobmodule] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8085 (http) with context path '/app1'
-2024-08-27T09:09:45.346+05:30  INFO 31368 --- [jobmodule] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8085
-2024-08-27T09:09:45.369+05:30  INFO 31368 --- [jobmodule] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_JOBMODULE/OMEN:jobmodule:8085 - registration status: 204
-2024-08-27T09:09:45.671+05:30  INFO 31368 --- [jobmodule] [restartedMain] com.job.JobmoduleApplication             : Started JobmoduleApplication in 14.931 seconds (process running for 16.993)
-2024-08-27T09:10:15.270+05:30  INFO 31368 --- [jobmodule] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2024-08-27T09:10:15.270+05:30  INFO 31368 --- [jobmodule] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2024-08-27T09:10:15.270+05:30  INFO 31368 --- [jobmodule] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2024-08-27T09:10:15.270+05:30  INFO 31368 --- [jobmodule] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2024-08-27T09:10:15.271+05:30  INFO 31368 --- [jobmodule] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2024-08-27T09:10:15.271+05:30  INFO 31368 --- [jobmodule] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
-2024-08-27T09:10:15.271+05:30  INFO 31368 --- [jobmodule] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2024-08-27T09:10:15.295+05:30  INFO 31368 --- [jobmodule] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2024-08-27T09:13:16.054+05:30  INFO 31368 --- [jobmodule] [http-nio-8085-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/app1]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-08-27T09:13:16.054+05:30  INFO 31368 --- [jobmodule] [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-08-27T09:13:16.058+05:30  INFO 31368 --- [jobmodule] [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
-2024-08-27T09:13:16.213+05:30  INFO 31368 --- [jobmodule] [http-nio-8085-exec-1] com.job.controller.JobController         : ----------------------------------------------
-2024-08-27T09:13:16.213+05:30  INFO 31368 --- [jobmodule] [http-nio-8085-exec-1] com.job.controller.JobController         : Find job using criteria controller mapping started
-2024-08-27T09:13:16.697+05:30  INFO 31368 --- [jobmodule] [http-nio-8085-exec-1] com.job.service.JobService               : Matching jobs = [Job(jobId=1, jobTitle=Graduate Trainee, description=Assist with project tasks, assignments, and initiatives under the guidance and supervision of senior team members., companyName=Tata Steel, workingArea=Core Mechanical, workingExperience=0, jobLocation=Hyderabad, jobType=Full Time, salary=600000, requiredSkill=Mechanical Engineering, postedDate=2024-08-25, applicationDeadline=2024-08-31, contactEmail=tatasteel@gmail.com), Job(jobId=5, jobTitle=Graduate Trainee, description=Assist with project tasks, assignments, and initiatives under the guidance and supervision of senior team members., companyName=Jsw Steel, workingArea=Core Mechanical, workingExperience=0, jobLocation=Hyderabad, jobType=Full Time, salary=900000, requiredSkill=Mechanical Engineering, postedDate=2024-08-26, applicationDeadline=2024-09-22, contactEmail=jswsteel@gmail.com)]
-2024-08-27T09:13:16.698+05:30  INFO 31368 --- [jobmodule] [http-nio-8085-exec-1] com.job.controller.JobController         : ----------------------------------------------
-2024-08-27T09:14:44.508+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T09:19:44.514+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T09:23:08.452+05:30  INFO 31368 --- [jobmodule] [http-nio-8085-exec-3] com.job.controller.JobController         : ----------------------------------------------
-2024-08-27T09:23:08.453+05:30  INFO 31368 --- [jobmodule] [http-nio-8085-exec-3] com.job.controller.JobController         : Add new job controller mapping started
-2024-08-27T09:23:08.558+05:30  INFO 31368 --- [jobmodule] [http-nio-8085-exec-3] com.job.service.JobService               : Job added successfully
-2024-08-27T09:23:08.559+05:30  INFO 31368 --- [jobmodule] [http-nio-8085-exec-3] com.job.controller.JobController         : ----------------------------------------------
-2024-08-27T09:23:52.632+05:30  INFO 31368 --- [jobmodule] [http-nio-8085-exec-4] com.job.controller.JobController         : ----------------------------------------------
-2024-08-27T09:23:52.632+05:30  INFO 31368 --- [jobmodule] [http-nio-8085-exec-4] com.job.controller.JobController         : Find job using criteria controller mapping started
-2024-08-27T09:23:52.638+05:30 ERROR 31368 --- [jobmodule] [http-nio-8085-exec-4] com.job.service.JobService               : No Job found for applied criteria
-2024-08-27T09:23:52.647+05:30  WARN 31368 --- [jobmodule] [http-nio-8085-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.job.exception.JobNotFoundException: No Job found for applied criteria]
-2024-08-27T09:23:58.458+05:30  INFO 31368 --- [jobmodule] [http-nio-8085-exec-5] com.job.controller.JobController         : ----------------------------------------------
-2024-08-27T09:23:58.458+05:30  INFO 31368 --- [jobmodule] [http-nio-8085-exec-5] com.job.controller.JobController         : Find job using criteria controller mapping started
-2024-08-27T09:23:58.464+05:30  INFO 31368 --- [jobmodule] [http-nio-8085-exec-5] com.job.service.JobService               : Matching jobs = [Job(jobId=1, jobTitle=Graduate Trainee, description=Assist with project tasks, assignments, and initiatives under the guidance and supervision of senior team members., companyName=Tata Steel, workingArea=Core Mechanical, workingExperience=0, jobLocation=Hyderabad, jobType=Full Time, salary=600000, requiredSkill=Mechanical Engineering, postedDate=2024-08-25, applicationDeadline=2024-08-31, contactEmail=tatasteel@gmail.com), Job(jobId=2, jobTitle=Graduate Engineer Trainee, description=Assist with project tasks, assignments, and initiatives under the guidance and supervision of senior team members., companyName=Capgemini, workingArea=IT/Software, workingExperience=0, jobLocation=Pune, jobType=Full Time, salary=500000, requiredSkill=Java, postedDate=2024-08-26, applicationDeadline=2024-08-27, contactEmail=tatasteel@gmail.com), Job(jobId=5, jobTitle=Graduate Trainee, description=Assist with project tasks, assignments, and initiatives under the guidance and supervision of senior team members., companyName=Jsw Steel, workingArea=Core Mechanical, workingExperience=0, jobLocation=Hyderabad, jobType=Full Time, salary=900000, requiredSkill=Mechanical Engineering, postedDate=2024-08-26, applicationDeadline=2024-09-22, contactEmail=jswsteel@gmail.com)]
-2024-08-27T09:23:58.464+05:30  INFO 31368 --- [jobmodule] [http-nio-8085-exec-5] com.job.controller.JobController         : ----------------------------------------------
-2024-08-27T09:24:14.941+05:30  INFO 31368 --- [jobmodule] [http-nio-8085-exec-7] com.job.controller.JobController         : ----------------------------------------------
-2024-08-27T09:24:14.941+05:30  INFO 31368 --- [jobmodule] [http-nio-8085-exec-7] com.job.controller.JobController         : Find job using criteria controller mapping started
-2024-08-27T09:24:14.948+05:30  INFO 31368 --- [jobmodule] [http-nio-8085-exec-7] com.job.service.JobService               : Matching jobs = [Job(jobId=1, jobTitle=Graduate Trainee, description=Assist with project tasks, assignments, and initiatives under the guidance and supervision of senior team members., companyName=Tata Steel, workingArea=Core Mechanical, workingExperience=0, jobLocation=Hyderabad, jobType=Full Time, salary=600000, requiredSkill=Mechanical Engineering, postedDate=2024-08-25, applicationDeadline=2024-08-31, contactEmail=tatasteel@gmail.com), Job(jobId=2, jobTitle=Graduate Engineer Trainee, description=Assist with project tasks, assignments, and initiatives under the guidance and supervision of senior team members., companyName=Capgemini, workingArea=IT/Software, workingExperience=0, jobLocation=Pune, jobType=Full Time, salary=500000, requiredSkill=Java, postedDate=2024-08-26, applicationDeadline=2024-08-27, contactEmail=tatasteel@gmail.com), Job(jobId=3, jobTitle=Web Developer, description=Web Developer handles tasks related to design and implementation of frontend in a website., companyName=Cognizant, workingArea=IT/Software, workingExperience=2, jobLocation=Mumbai, jobType=Full Time, salary=500000, requiredSkill=Web Development, postedDate=2024-08-26, applicationDeadline=2024-08-30, contactEmail=cognizant@gmail.com), Job(jobId=5, jobTitle=Graduate Trainee, description=Assist with project tasks, assignments, and initiatives under the guidance and supervision of senior team members., companyName=Jsw Steel, workingArea=Core Mechanical, workingExperience=0, jobLocation=Hyderabad, jobType=Full Time, salary=900000, requiredSkill=Mechanical Engineering, postedDate=2024-08-26, applicationDeadline=2024-09-22, contactEmail=jswsteel@gmail.com)]
-2024-08-27T09:24:14.948+05:30  INFO 31368 --- [jobmodule] [http-nio-8085-exec-7] com.job.controller.JobController         : ----------------------------------------------
-2024-08-27T09:24:44.526+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T09:25:15.163+05:30  INFO 31368 --- [jobmodule] [http-nio-8085-exec-6] com.job.controller.JobController         : ----------------------------------------------
-2024-08-27T09:25:15.164+05:30  INFO 31368 --- [jobmodule] [http-nio-8085-exec-6] com.job.controller.JobController         : Find job using criteria controller mapping started
-2024-08-27T09:25:15.167+05:30  INFO 31368 --- [jobmodule] [http-nio-8085-exec-6] com.job.service.JobService               : Matching jobs = [Job(jobId=2, jobTitle=Graduate Engineer Trainee, description=Assist with project tasks, assignments, and initiatives under the guidance and supervision of senior team members., companyName=Capgemini, workingArea=IT/Software, workingExperience=0, jobLocation=Pune, jobType=Full Time, salary=500000, requiredSkill=Java, postedDate=2024-08-26, applicationDeadline=2024-08-27, contactEmail=tatasteel@gmail.com)]
-2024-08-27T09:25:15.168+05:30  INFO 31368 --- [jobmodule] [http-nio-8085-exec-6] com.job.controller.JobController         : ----------------------------------------------
-2024-08-27T09:25:32.280+05:30  INFO 31368 --- [jobmodule] [http-nio-8085-exec-8] com.job.controller.JobController         : ----------------------------------------------
-2024-08-27T09:25:32.280+05:30  INFO 31368 --- [jobmodule] [http-nio-8085-exec-8] com.job.controller.JobController         : Find job using criteria controller mapping started
-2024-08-27T09:25:32.287+05:30  INFO 31368 --- [jobmodule] [http-nio-8085-exec-8] com.job.service.JobService               : Matching jobs = [Job(jobId=3, jobTitle=Web Developer, description=Web Developer handles tasks related to design and implementation of frontend in a website., companyName=Cognizant, workingArea=IT/Software, workingExperience=2, jobLocation=Mumbai, jobType=Full Time, salary=500000, requiredSkill=Web Development, postedDate=2024-08-26, applicationDeadline=2024-08-30, contactEmail=cognizant@gmail.com)]
-2024-08-27T09:25:32.288+05:30  INFO 31368 --- [jobmodule] [http-nio-8085-exec-8] com.job.controller.JobController         : ----------------------------------------------
-2024-08-27T09:25:47.736+05:30  INFO 31368 --- [jobmodule] [http-nio-8085-exec-9] com.job.controller.JobController         : ----------------------------------------------
-2024-08-27T09:25:47.737+05:30  INFO 31368 --- [jobmodule] [http-nio-8085-exec-9] com.job.controller.JobController         : Find job by id controller mapping started
-2024-08-27T09:25:47.764+05:30  INFO 31368 --- [jobmodule] [http-nio-8085-exec-9] com.job.service.JobService               : Job details = Job(jobId=5, jobTitle=Graduate Trainee, description=Assist with project tasks, assignments, and initiatives under the guidance and supervision of senior team members., companyName=Jsw Steel, workingArea=Core Mechanical, workingExperience=0, jobLocation=Hyderabad, jobType=Full Time, salary=900000, requiredSkill=Mechanical Engineering, postedDate=2024-08-26, applicationDeadline=2024-09-22, contactEmail=jswsteel@gmail.com)
-2024-08-27T09:25:47.764+05:30  INFO 31368 --- [jobmodule] [http-nio-8085-exec-9] com.job.controller.JobController         : ----------------------------------------------
-2024-08-27T09:29:44.531+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T09:33:49.680+05:30  INFO 31368 --- [jobmodule] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 3 class path changes (0 additions, 0 deletions, 3 modifications)
-2024-08-27T09:33:49.690+05:30  INFO 31368 --- [jobmodule] [Thread-1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application JOBMODULE with eureka with status DOWN
-2024-08-27T09:33:49.690+05:30  INFO 31368 --- [jobmodule] [Thread-1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1724731429690, current=DOWN, previous=UP]
-2024-08-27T09:33:49.691+05:30  INFO 31368 --- [jobmodule] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_JOBMODULE/OMEN:jobmodule:8085: registering service...
-2024-08-27T09:33:49.711+05:30  INFO 31368 --- [jobmodule] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_JOBMODULE/OMEN:jobmodule:8085 - registration status: 204
-2024-08-27T09:33:49.779+05:30  INFO 31368 --- [jobmodule] [Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-08-27T09:33:49.800+05:30  INFO 31368 --- [jobmodule] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-08-27T09:33:49.817+05:30  INFO 31368 --- [jobmodule] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-08-27T09:33:49.818+05:30  INFO 31368 --- [jobmodule] [Thread-1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
-2024-08-27T09:33:52.824+05:30  INFO 31368 --- [jobmodule] [Thread-1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
-2024-08-27T09:33:52.861+05:30  INFO 31368 --- [jobmodule] [Thread-1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_JOBMODULE/OMEN:jobmodule:8085 - deregister  status: 200
-2024-08-27T09:33:52.861+05:30  INFO 31368 --- [jobmodule] [Thread-1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
-2024-08-27T09:33:53.318+05:30  INFO 31368 --- [jobmodule] [restartedMain] com.job.JobmoduleApplication             : Starting JobmoduleApplication using Java 17.0.7 with PID 31368 (D:\Wipro Capstone Project\JobSeekerApp\jobmodule\jobmodule\target\classes started by HP in D:\Wipro Capstone Project\JobSeekerApp\jobmodule\jobmodule)
-2024-08-27T09:33:53.319+05:30  INFO 31368 --- [jobmodule] [restartedMain] com.job.JobmoduleApplication             : No active profile set, falling back to 1 default profile: "default"
-2024-08-27T09:33:53.590+05:30  INFO 31368 --- [jobmodule] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-08-27T09:33:53.598+05:30  INFO 31368 --- [jobmodule] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 1 JPA repository interface.
-2024-08-27T09:33:53.669+05:30  INFO 31368 --- [jobmodule] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=dcde960d-db8d-34ed-9a6e-ac95536a16ab
-2024-08-27T09:33:53.690+05:30  WARN 31368 --- [jobmodule] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
-2024-08-27T09:33:53.690+05:30  WARN 31368 --- [jobmodule] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
-2024-08-27T09:33:53.776+05:30  INFO 31368 --- [jobmodule] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8085 (http)
-2024-08-27T09:33:53.777+05:30  INFO 31368 --- [jobmodule] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-08-27T09:33:53.777+05:30  INFO 31368 --- [jobmodule] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
-2024-08-27T09:33:53.832+05:30  INFO 31368 --- [jobmodule] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/app1]   : Initializing Spring embedded WebApplicationContext
-2024-08-27T09:33:53.832+05:30  INFO 31368 --- [jobmodule] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 510 ms
-2024-08-27T09:33:53.889+05:30  INFO 31368 --- [jobmodule] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-08-27T09:33:53.892+05:30  INFO 31368 --- [jobmodule] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-08-27T09:33:53.908+05:30  INFO 31368 --- [jobmodule] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-08-27T09:33:53.909+05:30  INFO 31368 --- [jobmodule] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-2024-08-27T09:33:53.922+05:30  INFO 31368 --- [jobmodule] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@fdfc777
-2024-08-27T09:33:53.923+05:30  INFO 31368 --- [jobmodule] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-2024-08-27T09:33:53.924+05:30  WARN 31368 --- [jobmodule] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-08-27T09:33:53.983+05:30  INFO 31368 --- [jobmodule] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-08-27T09:33:54.015+05:30  INFO 31368 --- [jobmodule] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-08-27T09:33:54.107+05:30  WARN 31368 --- [jobmodule] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-08-27T09:33:54.240+05:30  WARN 31368 --- [jobmodule] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
-2024-08-27T09:33:54.500+05:30  INFO 31368 --- [jobmodule] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
-2024-08-27T09:33:54.513+05:30  WARN 31368 --- [jobmodule] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2024-08-27T09:33:54.522+05:30  INFO 31368 --- [jobmodule] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2024-08-27T09:33:54.523+05:30  INFO 31368 --- [jobmodule] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2024-08-27T09:33:54.524+05:30  INFO 31368 --- [jobmodule] [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T09:33:54.524+05:30  INFO 31368 --- [jobmodule] [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2024-08-27T09:33:54.524+05:30  INFO 31368 --- [jobmodule] [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2024-08-27T09:33:54.524+05:30  INFO 31368 --- [jobmodule] [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2024-08-27T09:33:54.524+05:30  INFO 31368 --- [jobmodule] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2024-08-27T09:33:54.524+05:30  INFO 31368 --- [jobmodule] [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2024-08-27T09:33:54.524+05:30  INFO 31368 --- [jobmodule] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2024-08-27T09:33:54.524+05:30  INFO 31368 --- [jobmodule] [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2024-08-27T09:33:54.554+05:30  INFO 31368 --- [jobmodule] [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2024-08-27T09:33:54.556+05:30  INFO 31368 --- [jobmodule] [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2024-08-27T09:33:54.556+05:30  INFO 31368 --- [jobmodule] [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2024-08-27T09:33:54.556+05:30  INFO 31368 --- [jobmodule] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1724731434556 with initial instances count: 3
-2024-08-27T09:33:54.559+05:30  INFO 31368 --- [jobmodule] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application JOBMODULE with eureka with status UP
-2024-08-27T09:33:54.559+05:30  INFO 31368 --- [jobmodule] [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1724731434559, current=UP, previous=STARTING]
-2024-08-27T09:33:54.559+05:30  INFO 31368 --- [jobmodule] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_JOBMODULE/OMEN:jobmodule:8085: registering service...
-2024-08-27T09:33:54.564+05:30  INFO 31368 --- [jobmodule] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8085 (http) with context path '/app1'
-2024-08-27T09:33:54.565+05:30  INFO 31368 --- [jobmodule] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8085
-2024-08-27T09:33:54.573+05:30  INFO 31368 --- [jobmodule] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_JOBMODULE/OMEN:jobmodule:8085 - registration status: 204
-2024-08-27T09:33:54.682+05:30  INFO 31368 --- [jobmodule] [restartedMain] com.job.JobmoduleApplication             : Started JobmoduleApplication in 1.543 seconds (process running for 1466.003)
-2024-08-27T09:33:54.686+05:30  INFO 31368 --- [jobmodule] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2024-08-27T09:38:54.540+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T09:39:29.851+05:30  INFO 31368 --- [jobmodule] [http-nio-8085-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/app1]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-08-27T09:39:29.851+05:30  INFO 31368 --- [jobmodule] [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-08-27T09:39:29.864+05:30  INFO 31368 --- [jobmodule] [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
-2024-08-27T09:39:29.873+05:30  INFO 31368 --- [jobmodule] [http-nio-8085-exec-1] com.job.controller.JobController         : ----------------------------------------------
-2024-08-27T09:39:29.873+05:30  INFO 31368 --- [jobmodule] [http-nio-8085-exec-1] com.job.controller.JobController         : Find job by id controller mapping started
-2024-08-27T09:39:29.887+05:30  INFO 31368 --- [jobmodule] [http-nio-8085-exec-1] com.job.service.JobService               : Job details = Job(jobId=1, jobTitle=Graduate Trainee, description=Assist with project tasks, assignments, and initiatives under the guidance and supervision of senior team members., companyName=Tata Steel, workingArea=Core Mechanical, workingExperience=0, jobLocation=Hyderabad, jobType=Full Time, salary=600000, requiredSkill=Mechanical Engineering, postedDate=2024-08-25, applicationDeadline=2024-08-31, contactEmail=tatasteel@gmail.com)
-2024-08-27T09:39:29.887+05:30  INFO 31368 --- [jobmodule] [http-nio-8085-exec-1] com.job.controller.JobController         : ----------------------------------------------
-2024-08-27T09:43:54.551+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T09:48:54.553+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T09:53:54.569+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T09:58:54.579+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T10:03:54.591+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T10:08:54.605+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T10:13:54.624+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T10:18:54.636+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T10:23:54.642+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T10:28:54.646+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T10:33:54.647+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T10:38:54.650+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T10:43:54.659+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T10:48:54.660+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T10:53:54.670+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T10:58:54.686+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T11:03:54.689+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T11:08:54.696+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T11:13:54.704+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T11:18:54.712+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T11:23:54.725+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T11:28:54.729+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T11:33:54.738+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T11:38:54.753+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T11:43:54.765+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T11:48:54.778+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T11:53:54.787+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T11:58:54.802+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T12:03:54.809+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T12:08:54.818+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T12:13:54.820+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T12:18:54.836+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T12:23:54.838+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T12:28:54.844+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T12:33:54.853+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T12:38:54.863+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T12:43:54.869+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T12:48:54.883+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T12:53:54.891+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T12:58:54.901+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T13:03:54.917+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T13:08:54.928+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T13:13:54.938+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T13:18:54.940+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T13:23:54.942+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T13:28:54.945+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T13:33:54.955+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T13:38:54.970+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T13:43:55.045+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T13:43:57.588+05:30  INFO 31368 --- [jobmodule] [http-nio-8085-exec-4] com.job.controller.JobController         : ----------------------------------------------
-2024-08-27T13:43:57.589+05:30  INFO 31368 --- [jobmodule] [http-nio-8085-exec-4] com.job.controller.JobController         : Find job by id controller mapping started
-2024-08-27T13:43:57.888+05:30  INFO 31368 --- [jobmodule] [http-nio-8085-exec-4] com.job.service.JobService               : Job details = Job(jobId=5, jobTitle=Graduate Trainee, description=Assist with project tasks, assignments, and initiatives under the guidance and supervision of senior team members., companyName=Jsw Steel, workingArea=Core Mechanical, workingExperience=0, jobLocation=Hyderabad, jobType=Full Time, salary=900000, requiredSkill=Mechanical Engineering, postedDate=2024-08-26, applicationDeadline=2024-09-22, contactEmail=jswsteel@gmail.com)
-2024-08-27T13:43:57.891+05:30  INFO 31368 --- [jobmodule] [http-nio-8085-exec-4] com.job.controller.JobController         : ----------------------------------------------
-2024-08-27T13:48:55.056+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T13:53:55.070+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T13:58:55.090+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T14:03:55.097+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T14:08:55.107+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T14:13:55.115+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T14:18:55.119+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T14:23:55.134+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T14:28:55.139+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T14:33:55.152+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T14:38:55.162+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T14:43:55.175+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T14:48:55.187+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T14:53:55.205+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T14:56:51.797+05:30  INFO 31368 --- [jobmodule] [http-nio-8085-exec-5] com.job.controller.JobController         : ----------------------------------------------
-2024-08-27T14:56:51.798+05:30  INFO 31368 --- [jobmodule] [http-nio-8085-exec-5] com.job.controller.JobController         : Find job by id controller mapping started
-2024-08-27T14:56:51.865+05:30  INFO 31368 --- [jobmodule] [http-nio-8085-exec-5] com.job.service.JobService               : Job details = Job(jobId=5, jobTitle=Graduate Trainee, description=Assist with project tasks, assignments, and initiatives under the guidance and supervision of senior team members., companyName=Jsw Steel, workingArea=Core Mechanical, workingExperience=0, jobLocation=Hyderabad, jobType=Full Time, salary=900000, requiredSkill=Mechanical Engineering, postedDate=2024-08-26, applicationDeadline=2024-09-22, contactEmail=jswsteel@gmail.com)
-2024-08-27T14:56:51.866+05:30  INFO 31368 --- [jobmodule] [http-nio-8085-exec-5] com.job.controller.JobController         : ----------------------------------------------
-2024-08-27T14:57:16.995+05:30  INFO 31368 --- [jobmodule] [http-nio-8085-exec-6] com.job.controller.JobController         : ----------------------------------------------
-2024-08-27T14:57:16.995+05:30  INFO 31368 --- [jobmodule] [http-nio-8085-exec-6] com.job.controller.JobController         : Find job by id controller mapping started
-2024-08-27T14:57:17.010+05:30  INFO 31368 --- [jobmodule] [http-nio-8085-exec-6] com.job.service.JobService               : Job details = Job(jobId=1, jobTitle=Graduate Trainee, description=Assist with project tasks, assignments, and initiatives under the guidance and supervision of senior team members., companyName=Tata Steel, workingArea=Core Mechanical, workingExperience=0, jobLocation=Hyderabad, jobType=Full Time, salary=600000, requiredSkill=Mechanical Engineering, postedDate=2024-08-25, applicationDeadline=2024-08-31, contactEmail=tatasteel@gmail.com)
-2024-08-27T14:57:17.011+05:30  INFO 31368 --- [jobmodule] [http-nio-8085-exec-6] com.job.controller.JobController         : ----------------------------------------------
-2024-08-27T14:58:55.219+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T15:03:55.225+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T15:08:55.239+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T15:09:13.962+05:30  INFO 31368 --- [jobmodule] [http-nio-8085-exec-8] com.job.controller.JobController         : ----------------------------------------------
-2024-08-27T15:09:13.962+05:30  INFO 31368 --- [jobmodule] [http-nio-8085-exec-8] com.job.controller.JobController         : Find job by id controller mapping started
-2024-08-27T15:09:13.971+05:30  INFO 31368 --- [jobmodule] [http-nio-8085-exec-8] com.job.service.JobService               : Job details = Job(jobId=1, jobTitle=Graduate Trainee, description=Assist with project tasks, assignments, and initiatives under the guidance and supervision of senior team members., companyName=Tata Steel, workingArea=Core Mechanical, workingExperience=0, jobLocation=Hyderabad, jobType=Full Time, salary=600000, requiredSkill=Mechanical Engineering, postedDate=2024-08-25, applicationDeadline=2024-08-31, contactEmail=tatasteel@gmail.com)
-2024-08-27T15:09:13.971+05:30  INFO 31368 --- [jobmodule] [http-nio-8085-exec-8] com.job.controller.JobController         : ----------------------------------------------
-2024-08-27T15:09:56.904+05:30  INFO 31368 --- [jobmodule] [http-nio-8085-exec-9] com.job.controller.JobController         : ----------------------------------------------
-2024-08-27T15:09:56.904+05:30  INFO 31368 --- [jobmodule] [http-nio-8085-exec-9] com.job.controller.JobController         : Find job by id controller mapping started
-2024-08-27T15:09:56.912+05:30  INFO 31368 --- [jobmodule] [http-nio-8085-exec-9] com.job.service.JobService               : Job details = Job(jobId=1, jobTitle=Graduate Trainee, description=Assist with project tasks, assignments, and initiatives under the guidance and supervision of senior team members., companyName=Tata Steel, workingArea=Core Mechanical, workingExperience=0, jobLocation=Hyderabad, jobType=Full Time, salary=600000, requiredSkill=Mechanical Engineering, postedDate=2024-08-25, applicationDeadline=2024-08-31, contactEmail=tatasteel@gmail.com)
-2024-08-27T15:09:56.912+05:30  INFO 31368 --- [jobmodule] [http-nio-8085-exec-9] com.job.controller.JobController         : ----------------------------------------------
-2024-08-27T15:13:55.255+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T15:18:55.261+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T15:23:55.271+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T15:28:55.286+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T15:33:55.300+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T15:34:03.655+05:30  INFO 31368 --- [jobmodule] [http-nio-8085-exec-2] com.job.controller.JobController         : ----------------------------------------------
-2024-08-27T15:34:03.657+05:30  INFO 31368 --- [jobmodule] [http-nio-8085-exec-2] com.job.controller.JobController         : Find job by id controller mapping started
-2024-08-27T15:34:03.964+05:30  INFO 31368 --- [jobmodule] [http-nio-8085-exec-2] com.job.service.JobService               : Job details = Job(jobId=1, jobTitle=Graduate Trainee, description=Assist with project tasks, assignments, and initiatives under the guidance and supervision of senior team members., companyName=Tata Steel, workingArea=Core Mechanical, workingExperience=0, jobLocation=Hyderabad, jobType=Full Time, salary=600000, requiredSkill=Mechanical Engineering, postedDate=2024-08-25, applicationDeadline=2024-08-31, contactEmail=tatasteel@gmail.com)
-2024-08-27T15:34:03.967+05:30  INFO 31368 --- [jobmodule] [http-nio-8085-exec-2] com.job.controller.JobController         : ----------------------------------------------
-2024-08-27T15:34:46.249+05:30  INFO 31368 --- [jobmodule] [http-nio-8085-exec-4] com.job.controller.JobController         : ----------------------------------------------
-2024-08-27T15:34:46.249+05:30  INFO 31368 --- [jobmodule] [http-nio-8085-exec-4] com.job.controller.JobController         : Find job by id controller mapping started
-2024-08-27T15:34:46.255+05:30  INFO 31368 --- [jobmodule] [http-nio-8085-exec-4] com.job.service.JobService               : Job details = Job(jobId=1, jobTitle=Graduate Trainee, description=Assist with project tasks, assignments, and initiatives under the guidance and supervision of senior team members., companyName=Tata Steel, workingArea=Core Mechanical, workingExperience=0, jobLocation=Hyderabad, jobType=Full Time, salary=600000, requiredSkill=Mechanical Engineering, postedDate=2024-08-25, applicationDeadline=2024-08-31, contactEmail=tatasteel@gmail.com)
-2024-08-27T15:34:46.256+05:30  INFO 31368 --- [jobmodule] [http-nio-8085-exec-4] com.job.controller.JobController         : ----------------------------------------------
-2024-08-27T15:38:55.307+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T15:42:50.318+05:30  INFO 31368 --- [jobmodule] [http-nio-8085-exec-5] com.job.controller.JobController         : ----------------------------------------------
-2024-08-27T15:42:50.318+05:30  INFO 31368 --- [jobmodule] [http-nio-8085-exec-5] com.job.controller.JobController         : Find job by id controller mapping started
-2024-08-27T15:42:50.328+05:30  INFO 31368 --- [jobmodule] [http-nio-8085-exec-5] com.job.service.JobService               : Job details = Job(jobId=1, jobTitle=Graduate Trainee, description=Assist with project tasks, assignments, and initiatives under the guidance and supervision of senior team members., companyName=Tata Steel, workingArea=Core Mechanical, workingExperience=0, jobLocation=Hyderabad, jobType=Full Time, salary=600000, requiredSkill=Mechanical Engineering, postedDate=2024-08-25, applicationDeadline=2024-08-31, contactEmail=tatasteel@gmail.com)
-2024-08-27T15:42:50.329+05:30  INFO 31368 --- [jobmodule] [http-nio-8085-exec-5] com.job.controller.JobController         : ----------------------------------------------
-2024-08-27T15:43:55.346+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T15:48:55.362+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T15:53:55.383+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T15:54:44.679+05:30  INFO 31368 --- [jobmodule] [http-nio-8085-exec-7] com.job.controller.JobController         : ----------------------------------------------
-2024-08-27T15:54:44.680+05:30  INFO 31368 --- [jobmodule] [http-nio-8085-exec-7] com.job.controller.JobController         : Find job by id controller mapping started
-2024-08-27T15:54:44.801+05:30  INFO 31368 --- [jobmodule] [http-nio-8085-exec-7] com.job.service.JobService               : Job details = Job(jobId=1, jobTitle=Graduate Trainee, description=Assist with project tasks, assignments, and initiatives under the guidance and supervision of senior team members., companyName=Tata Steel, workingArea=Core Mechanical, workingExperience=0, jobLocation=Hyderabad, jobType=Full Time, salary=600000, requiredSkill=Mechanical Engineering, postedDate=2024-08-25, applicationDeadline=2024-08-31, contactEmail=tatasteel@gmail.com)
-2024-08-27T15:54:44.803+05:30  INFO 31368 --- [jobmodule] [http-nio-8085-exec-7] com.job.controller.JobController         : ----------------------------------------------
-2024-08-27T15:58:55.389+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T16:03:55.393+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T16:08:28.054+05:30  INFO 31368 --- [jobmodule] [http-nio-8085-exec-9] com.job.controller.JobController         : ----------------------------------------------
-2024-08-27T16:08:28.054+05:30  INFO 31368 --- [jobmodule] [http-nio-8085-exec-9] com.job.controller.JobController         : Find job by id controller mapping started
-2024-08-27T16:08:28.083+05:30  INFO 31368 --- [jobmodule] [http-nio-8085-exec-9] com.job.service.JobService               : Job details = Job(jobId=2, jobTitle=Graduate Engineer Trainee, description=Assist with project tasks, assignments, and initiatives under the guidance and supervision of senior team members., companyName=Capgemini, workingArea=IT/Software, workingExperience=0, jobLocation=Pune, jobType=Full Time, salary=500000, requiredSkill=Java, postedDate=2024-08-26, applicationDeadline=2024-08-27, contactEmail=tatasteel@gmail.com)
-2024-08-27T16:08:28.084+05:30  INFO 31368 --- [jobmodule] [http-nio-8085-exec-9] com.job.controller.JobController         : ----------------------------------------------
-2024-08-27T16:08:55.407+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T16:13:55.409+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T16:18:55.413+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T16:22:31.740+05:30  INFO 31368 --- [jobmodule] [http-nio-8085-exec-1] com.job.controller.JobController         : ----------------------------------------------
-2024-08-27T16:22:31.740+05:30  INFO 31368 --- [jobmodule] [http-nio-8085-exec-1] com.job.controller.JobController         : Find job by id controller mapping started
-2024-08-27T16:22:31.784+05:30  INFO 31368 --- [jobmodule] [http-nio-8085-exec-1] com.job.service.JobService               : Job details = Job(jobId=2, jobTitle=Graduate Engineer Trainee, description=Assist with project tasks, assignments, and initiatives under the guidance and supervision of senior team members., companyName=Capgemini, workingArea=IT/Software, workingExperience=0, jobLocation=Pune, jobType=Full Time, salary=500000, requiredSkill=Java, postedDate=2024-08-26, applicationDeadline=2024-08-27, contactEmail=tatasteel@gmail.com)
-2024-08-27T16:22:31.785+05:30  INFO 31368 --- [jobmodule] [http-nio-8085-exec-1] com.job.controller.JobController         : ----------------------------------------------
-2024-08-27T16:23:55.418+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T16:28:55.422+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T16:33:55.433+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T16:37:58.521+05:30  INFO 31368 --- [jobmodule] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
-2024-08-27T16:37:58.550+05:30  INFO 31368 --- [jobmodule] [Thread-7] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application JOBMODULE with eureka with status DOWN
-2024-08-27T16:37:58.550+05:30  INFO 31368 --- [jobmodule] [Thread-7] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1724756878550, current=DOWN, previous=UP]
-2024-08-27T16:37:58.552+05:30  INFO 31368 --- [jobmodule] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_JOBMODULE/OMEN:jobmodule:8085: registering service...
-2024-08-27T16:37:58.595+05:30  INFO 31368 --- [jobmodule] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_JOBMODULE/OMEN:jobmodule:8085 - registration status: 204
-2024-08-27T16:37:58.749+05:30  INFO 31368 --- [jobmodule] [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-08-27T16:37:58.786+05:30  INFO 31368 --- [jobmodule] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
-2024-08-27T16:37:58.795+05:30  INFO 31368 --- [jobmodule] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
-2024-08-27T16:37:58.798+05:30  INFO 31368 --- [jobmodule] [Thread-7] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
-2024-08-27T16:38:01.807+05:30  INFO 31368 --- [jobmodule] [Thread-7] com.netflix.discovery.DiscoveryClient    : Unregistering ...
-2024-08-27T16:38:01.811+05:30  INFO 31368 --- [jobmodule] [Thread-7] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_JOBMODULE/OMEN:jobmodule:8085 - deregister  status: 200
-2024-08-27T16:38:01.811+05:30  INFO 31368 --- [jobmodule] [Thread-7] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
-2024-08-27T16:38:02.843+05:30  INFO 31368 --- [jobmodule] [restartedMain] com.job.JobmoduleApplication             : Starting JobmoduleApplication using Java 17.0.7 with PID 31368 (D:\Wipro Capstone Project\JobSeekerApp\jobmodule\jobmodule\target\classes started by HP in D:\Wipro Capstone Project\JobSeekerApp\jobmodule\jobmodule)
-2024-08-27T16:38:02.843+05:30  INFO 31368 --- [jobmodule] [restartedMain] com.job.JobmoduleApplication             : No active profile set, falling back to 1 default profile: "default"
-2024-08-27T16:38:03.141+05:30  INFO 31368 --- [jobmodule] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-08-27T16:38:03.151+05:30  INFO 31368 --- [jobmodule] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 1 JPA repository interface.
-2024-08-27T16:38:03.207+05:30  INFO 31368 --- [jobmodule] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=dcde960d-db8d-34ed-9a6e-ac95536a16ab
-2024-08-27T16:38:03.240+05:30  WARN 31368 --- [jobmodule] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
-2024-08-27T16:38:03.241+05:30  WARN 31368 --- [jobmodule] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
-2024-08-27T16:38:03.340+05:30  INFO 31368 --- [jobmodule] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8085 (http)
-2024-08-27T16:38:03.341+05:30  INFO 31368 --- [jobmodule] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-08-27T16:38:03.341+05:30  INFO 31368 --- [jobmodule] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
-2024-08-27T16:38:03.409+05:30  INFO 31368 --- [jobmodule] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/app1]   : Initializing Spring embedded WebApplicationContext
-2024-08-27T16:38:03.409+05:30  INFO 31368 --- [jobmodule] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 563 ms
-2024-08-27T16:38:03.464+05:30  INFO 31368 --- [jobmodule] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-08-27T16:38:03.467+05:30  INFO 31368 --- [jobmodule] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-08-27T16:38:03.478+05:30  INFO 31368 --- [jobmodule] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-08-27T16:38:03.479+05:30  INFO 31368 --- [jobmodule] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
-2024-08-27T16:38:03.485+05:30  INFO 31368 --- [jobmodule] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1de520aa
-2024-08-27T16:38:03.486+05:30  INFO 31368 --- [jobmodule] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
-2024-08-27T16:38:03.489+05:30  WARN 31368 --- [jobmodule] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-08-27T16:38:03.543+05:30  INFO 31368 --- [jobmodule] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-08-27T16:38:03.566+05:30  INFO 31368 --- [jobmodule] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-08-27T16:38:03.640+05:30  WARN 31368 --- [jobmodule] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-08-27T16:38:03.763+05:30  WARN 31368 --- [jobmodule] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
-2024-08-27T16:38:04.043+05:30  INFO 31368 --- [jobmodule] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
-2024-08-27T16:38:04.059+05:30  WARN 31368 --- [jobmodule] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2024-08-27T16:38:04.068+05:30  INFO 31368 --- [jobmodule] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2024-08-27T16:38:04.070+05:30  INFO 31368 --- [jobmodule] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2024-08-27T16:38:04.070+05:30  INFO 31368 --- [jobmodule] [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T16:38:04.071+05:30  INFO 31368 --- [jobmodule] [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2024-08-27T16:38:04.071+05:30  INFO 31368 --- [jobmodule] [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2024-08-27T16:38:04.071+05:30  INFO 31368 --- [jobmodule] [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2024-08-27T16:38:04.071+05:30  INFO 31368 --- [jobmodule] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2024-08-27T16:38:04.071+05:30  INFO 31368 --- [jobmodule] [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2024-08-27T16:38:04.071+05:30  INFO 31368 --- [jobmodule] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2024-08-27T16:38:04.071+05:30  INFO 31368 --- [jobmodule] [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2024-08-27T16:38:04.095+05:30  INFO 31368 --- [jobmodule] [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2024-08-27T16:38:04.096+05:30  INFO 31368 --- [jobmodule] [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2024-08-27T16:38:04.097+05:30  INFO 31368 --- [jobmodule] [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2024-08-27T16:38:04.097+05:30  INFO 31368 --- [jobmodule] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1724756884097 with initial instances count: 3
-2024-08-27T16:38:04.099+05:30  INFO 31368 --- [jobmodule] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application JOBMODULE with eureka with status UP
-2024-08-27T16:38:04.099+05:30  INFO 31368 --- [jobmodule] [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1724756884099, current=UP, previous=STARTING]
-2024-08-27T16:38:04.099+05:30  INFO 31368 --- [jobmodule] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_JOBMODULE/OMEN:jobmodule:8085: registering service...
-2024-08-27T16:38:04.105+05:30  INFO 31368 --- [jobmodule] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8085 (http) with context path '/app1'
-2024-08-27T16:38:04.106+05:30  INFO 31368 --- [jobmodule] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8085
-2024-08-27T16:38:04.112+05:30  INFO 31368 --- [jobmodule] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_JOBMODULE/OMEN:jobmodule:8085 - registration status: 204
-2024-08-27T16:38:04.231+05:30  INFO 31368 --- [jobmodule] [restartedMain] com.job.JobmoduleApplication             : Started JobmoduleApplication in 1.616 seconds (process running for 26915.553)
-2024-08-27T16:38:04.232+05:30  INFO 31368 --- [jobmodule] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2024-08-27T16:43:04.088+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T16:48:04.100+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T16:53:04.108+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T16:58:04.121+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T17:03:04.124+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T17:08:04.138+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T17:13:04.141+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T17:18:04.148+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T17:23:04.153+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T17:28:04.162+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T17:33:04.164+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T17:38:04.170+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T17:43:04.179+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T17:48:04.185+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T17:53:04.200+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T17:58:04.204+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T18:03:04.218+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-08-27T18:08:04.242+05:30  INFO 31368 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-08-30T09:53:49.880+05:30  INFO 15364 --- [jobmodule] [restartedMain] com.job.JobmoduleApplication             : Starting JobmoduleApplication using Java 17.0.7 with PID 15364 (D:\Wipro Capstone Project\JobSeekerApp\jobmodule\jobmodule\target\classes started by HP in D:\Wipro Capstone Project\JobSeekerApp\jobmodule\jobmodule)
+2024-08-30T09:53:49.886+05:30  INFO 15364 --- [jobmodule] [restartedMain] com.job.JobmoduleApplication             : No active profile set, falling back to 1 default profile: "default"
+2024-08-30T09:53:49.945+05:30  INFO 15364 --- [jobmodule] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-08-30T09:53:49.946+05:30  INFO 15364 --- [jobmodule] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-08-30T09:53:50.829+05:30  INFO 15364 --- [jobmodule] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-30T09:53:51.005+05:30  INFO 15364 --- [jobmodule] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 167 ms. Found 1 JPA repository interface.
+2024-08-30T09:53:51.271+05:30  INFO 15364 --- [jobmodule] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=dcde960d-db8d-34ed-9a6e-ac95536a16ab
+2024-08-30T09:53:51.422+05:30  WARN 15364 --- [jobmodule] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-08-30T09:53:51.424+05:30  WARN 15364 --- [jobmodule] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-08-30T09:53:51.844+05:30  INFO 15364 --- [jobmodule] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8085 (http)
+2024-08-30T09:53:51.859+05:30  INFO 15364 --- [jobmodule] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-30T09:53:51.859+05:30  INFO 15364 --- [jobmodule] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-30T09:53:51.939+05:30  INFO 15364 --- [jobmodule] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/app1]   : Initializing Spring embedded WebApplicationContext
+2024-08-30T09:53:51.939+05:30  INFO 15364 --- [jobmodule] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1992 ms
+2024-08-30T09:53:52.077+05:30  INFO 15364 --- [jobmodule] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-30T09:53:52.142+05:30  INFO 15364 --- [jobmodule] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-30T09:53:52.181+05:30  INFO 15364 --- [jobmodule] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-30T09:53:52.476+05:30  INFO 15364 --- [jobmodule] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-30T09:53:52.504+05:30  INFO 15364 --- [jobmodule] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-08-30T09:53:53.671+05:30  WARN 15364 --- [jobmodule] [restartedMain] o.h.e.j.e.i.JdbcEnvironmentInitiator     : HHH000342: Could not obtain connection to query metadata
+
+java.lang.NullPointerException: Cannot invoke "org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(java.sql.SQLException, String)" because the return value of "org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.sqlExceptionHelper()" is null
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:116) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:290) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:123) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:77) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:221) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:189) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:171) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1431) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1502) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75) ~[spring-orm-6.1.11.jar:6.1.11]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.1.11.jar:6.1.11]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.1.11.jar:6.1.11]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.1.11.jar:6.1.11]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:954) ~[spring-context-6.1.11.jar:6.1.11]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625) ~[spring-context-6.1.11.jar:6.1.11]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.2.jar:3.3.2]
+	at com.job.JobmoduleApplication.main(JobmoduleApplication.java:12) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.3.2.jar:3.3.2]
+
+2024-08-30T09:53:53.696+05:30  WARN 15364 --- [jobmodule] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-30T09:53:54.478+05:30  INFO 15364 --- [jobmodule] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-30T09:53:54.495+05:30  INFO 15364 --- [jobmodule] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-08-30T09:53:55.508+05:30  WARN 15364 --- [jobmodule] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 08001
+2024-08-30T09:53:55.509+05:30 ERROR 15364 --- [jobmodule] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : Public Key Retrieval is not allowed
+2024-08-30T09:53:55.514+05:30 ERROR 15364 --- [jobmodule] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Public Key Retrieval is not allowed] [n/a]
+2024-08-30T09:53:55.514+05:30  WARN 15364 --- [jobmodule] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Public Key Retrieval is not allowed] [n/a]
+2024-08-30T09:53:55.516+05:30  INFO 15364 --- [jobmodule] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-08-30T09:53:55.527+05:30  INFO 15364 --- [jobmodule] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-08-30T09:53:55.546+05:30 ERROR 15364 --- [jobmodule] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Public Key Retrieval is not allowed] [n/a]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1806) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:954) ~[spring-context-6.1.11.jar:6.1.11]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625) ~[spring-context-6.1.11.jar:6.1.11]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.2.jar:3.3.2]
+	at com.job.JobmoduleApplication.main(JobmoduleApplication.java:12) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.3.2.jar:3.3.2]
+Caused by: jakarta.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Public Key Retrieval is not allowed] [n/a]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:421) ~[spring-orm-6.1.11.jar:6.1.11]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.1.11.jar:6.1.11]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802) ~[spring-beans-6.1.11.jar:6.1.11]
+	... 20 common frames omitted
+Caused by: org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Public Key Retrieval is not allowed] [n/a]
+	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:51) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:74) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:39) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:63) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcDatabaseMetaData(ImprovedExtractionContextImpl.java:70) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processTableResultSet(InformationExtractorJdbcDatabaseMetaDataImpl.java:65) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.tool.schema.extract.internal.AbstractInformationExtractorImpl.getTables(AbstractInformationExtractorImpl.java:570) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.getTablesInformation(DatabaseInformationImpl.java:122) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.tool.schema.internal.GroupedSchemaValidatorImpl.validateTables(GroupedSchemaValidatorImpl.java:41) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.performValidation(AbstractSchemaValidator.java:98) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.doValidation(AbstractSchemaValidator.java:76) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:289) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:144) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at java.base/java.util.HashMap.forEach(HashMap.java:1421) ~[na:na]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:141) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:322) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:457) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1506) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75) ~[spring-orm-6.1.11.jar:6.1.11]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.1.11.jar:6.1.11]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.1.11.jar:6.1.11]
+	... 24 common frames omitted
+Caused by: java.sql.SQLNonTransientConnectionException: Public Key Retrieval is not allowed
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:111) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:815) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:438) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:189) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:137) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:360) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:461) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:550) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:98) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111) ~[HikariCP-5.1.0.jar:na]
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:437) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:46) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	... 45 common frames omitted
+Caused by: com.mysql.cj.exceptions.UnableToConnectException: Public Key Retrieval is not allowed
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[na:na]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:85) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.protocol.a.authentication.CachingSha2PasswordPlugin.nextAuthenticationStep(CachingSha2PasswordPlugin.java:131) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.protocol.a.authentication.CachingSha2PasswordPlugin.nextAuthenticationStep(CachingSha2PasswordPlugin.java:49) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.proceedHandshakeWithPluggableAuthentication(NativeAuthenticationProvider.java:446) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.connect(NativeAuthenticationProvider.java:215) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.protocol.a.NativeProtocol.connect(NativeProtocol.java:1428) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:133) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:935) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:805) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	... 58 common frames omitted
+
+2024-08-30T09:55:09.706+05:30  INFO 11312 --- [jobmodule] [restartedMain] com.job.JobmoduleApplication             : Starting JobmoduleApplication using Java 17.0.7 with PID 11312 (D:\Wipro Capstone Project\JobSeekerApp\jobmodule\jobmodule\target\classes started by HP in D:\Wipro Capstone Project\JobSeekerApp\jobmodule\jobmodule)
+2024-08-30T09:55:09.710+05:30  INFO 11312 --- [jobmodule] [restartedMain] com.job.JobmoduleApplication             : No active profile set, falling back to 1 default profile: "default"
+2024-08-30T09:55:09.760+05:30  INFO 11312 --- [jobmodule] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-08-30T09:55:09.761+05:30  INFO 11312 --- [jobmodule] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-08-30T09:55:10.569+05:30  INFO 11312 --- [jobmodule] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-30T09:55:10.732+05:30  INFO 11312 --- [jobmodule] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 152 ms. Found 1 JPA repository interface.
+2024-08-30T09:55:10.954+05:30  INFO 11312 --- [jobmodule] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=dcde960d-db8d-34ed-9a6e-ac95536a16ab
+2024-08-30T09:55:11.127+05:30  WARN 11312 --- [jobmodule] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-08-30T09:55:11.131+05:30  WARN 11312 --- [jobmodule] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-08-30T09:55:11.637+05:30  INFO 11312 --- [jobmodule] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8085 (http)
+2024-08-30T09:55:11.653+05:30  INFO 11312 --- [jobmodule] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-30T09:55:11.653+05:30  INFO 11312 --- [jobmodule] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-30T09:55:11.732+05:30  INFO 11312 --- [jobmodule] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/app1]   : Initializing Spring embedded WebApplicationContext
+2024-08-30T09:55:11.732+05:30  INFO 11312 --- [jobmodule] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1971 ms
+2024-08-30T09:55:11.884+05:30  INFO 11312 --- [jobmodule] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-30T09:55:11.950+05:30  INFO 11312 --- [jobmodule] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-30T09:55:11.988+05:30  INFO 11312 --- [jobmodule] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-30T09:55:12.337+05:30  INFO 11312 --- [jobmodule] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-30T09:55:12.367+05:30  INFO 11312 --- [jobmodule] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-08-30T09:55:12.537+05:30  INFO 11312 --- [jobmodule] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@82dda81
+2024-08-30T09:55:12.539+05:30  INFO 11312 --- [jobmodule] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-08-30T09:55:12.595+05:30  WARN 11312 --- [jobmodule] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-30T09:55:13.676+05:30  INFO 11312 --- [jobmodule] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-30T09:55:13.724+05:30  INFO 11312 --- [jobmodule] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-30T09:55:13.948+05:30  INFO 11312 --- [jobmodule] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-08-30T09:55:14.529+05:30  WARN 11312 --- [jobmodule] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-30T09:55:15.004+05:30  WARN 11312 --- [jobmodule] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2024-08-30T09:55:15.346+05:30  INFO 11312 --- [jobmodule] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2024-08-30T09:55:15.409+05:30  WARN 11312 --- [jobmodule] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2024-08-30T09:55:15.434+05:30  INFO 11312 --- [jobmodule] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2024-08-30T09:55:15.463+05:30  INFO 11312 --- [jobmodule] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2024-08-30T09:55:15.467+05:30  INFO 11312 --- [jobmodule] [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-08-30T09:55:15.479+05:30  INFO 11312 --- [jobmodule] [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2024-08-30T09:55:15.479+05:30  INFO 11312 --- [jobmodule] [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2024-08-30T09:55:15.479+05:30  INFO 11312 --- [jobmodule] [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2024-08-30T09:55:15.479+05:30  INFO 11312 --- [jobmodule] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2024-08-30T09:55:15.479+05:30  INFO 11312 --- [jobmodule] [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2024-08-30T09:55:15.479+05:30  INFO 11312 --- [jobmodule] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2024-08-30T09:55:15.479+05:30  INFO 11312 --- [jobmodule] [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2024-08-30T09:55:15.835+05:30  INFO 11312 --- [jobmodule] [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2024-08-30T09:55:15.838+05:30  INFO 11312 --- [jobmodule] [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2024-08-30T09:55:15.840+05:30  INFO 11312 --- [jobmodule] [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2024-08-30T09:55:15.841+05:30  INFO 11312 --- [jobmodule] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1724991915841 with initial instances count: 1
+2024-08-30T09:55:15.845+05:30  INFO 11312 --- [jobmodule] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application JOBMODULE with eureka with status UP
+2024-08-30T09:55:15.845+05:30  INFO 11312 --- [jobmodule] [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1724991915845, current=UP, previous=STARTING]
+2024-08-30T09:55:15.847+05:30  INFO 11312 --- [jobmodule] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_JOBMODULE/OMEN:jobmodule:8085: registering service...
+2024-08-30T09:55:15.873+05:30  INFO 11312 --- [jobmodule] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8085 (http) with context path '/app1'
+2024-08-30T09:55:15.874+05:30  INFO 11312 --- [jobmodule] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8085
+2024-08-30T09:55:15.889+05:30  INFO 11312 --- [jobmodule] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_JOBMODULE/OMEN:jobmodule:8085 - registration status: 204
+2024-08-30T09:55:16.023+05:30  INFO 11312 --- [jobmodule] [restartedMain] com.job.JobmoduleApplication             : Started JobmoduleApplication in 6.995 seconds (process running for 7.67)
+2024-08-30T10:00:15.493+05:30  INFO 11312 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-08-30T10:05:15.506+05:30  INFO 11312 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-08-30T10:10:15.508+05:30  INFO 11312 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-08-30T10:15:15.512+05:30  INFO 11312 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-08-30T10:20:15.529+05:30  INFO 11312 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-08-30T10:25:15.532+05:30  INFO 11312 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-08-30T10:30:15.546+05:30  INFO 11312 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-08-30T10:35:15.552+05:30  INFO 11312 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-08-30T10:40:15.555+05:30  INFO 11312 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-08-30T10:45:15.556+05:30  INFO 11312 --- [jobmodule] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration

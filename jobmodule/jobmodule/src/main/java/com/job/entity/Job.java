@@ -28,32 +28,32 @@ public class Job {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long jobId;
-	@NotNull
+	@NotNull(message = "Value cannot be null")
 	private String jobTitle;
-	@NotNull
+	@NotNull(message = "Value cannot be null")
 	private String description;
-	@NotNull
+	@NotNull(message = "Value cannot be null")
 	private String companyName;
-	@NotNull
+	@NotNull(message = "Value cannot be null")
 	private String workingArea;   
-	@NotNull
+	@NotNull(message = "Value cannot be null")
 	@PositiveOrZero(message = "Cannot be a negative value")
 	private Integer workingExperience; // In Years
-	@NotNull
+	@NotNull(message = "Value cannot be null")
 	private String jobLocation;        // City name
-	@NotNull
+	@NotNull(message = "Value cannot be null")
 	private String jobType;
-	@NotNull
+	@NotNull(message = "Value cannot be null")
 	@Positive(message = "Cannot be a negative value or Zero")
 	private Long salary;
-	@NotNull
+	@NotNull(message = "Value cannot be null")
 	private String requiredSkill;
 	@CreationTimestamp
 	private LocalDate postedDate;
-	@NotNull
+	@NotNull(message = "Value cannot be null")
 	@Future(message = "Must be a future Date")
 	private LocalDate applicationDeadline;
-	@NotNull
+	@NotNull(message = "Value cannot be null")
 	@Email(message = "Enter a correct email id")
 	private String contactEmail;
 }

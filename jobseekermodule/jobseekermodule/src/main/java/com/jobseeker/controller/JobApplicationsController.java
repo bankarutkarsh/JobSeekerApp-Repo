@@ -33,6 +33,7 @@ public class JobApplicationsController {
 	
 	Logger logger = LoggerFactory.getLogger(JobApplicationsController.class);
 
+	// Controller Mapping for applying a job
 	@PostMapping("/apply")
 	public ResponseEntity<ApiResponse> applyToJob(@RequestBody ParamsBean bean)
 			throws JobSeekerIdNotFoundException, JobNotFoundException, JobDeadLinePassedException,
@@ -47,6 +48,8 @@ public class JobApplicationsController {
 		return new ResponseEntity<ApiResponse>(response, HttpStatus.OK);
 	}
 
+	
+	// Controller mapping for getting all applied job for a job seeker
 	@GetMapping("/applications/{jobseekerId}")
 	public ResponseEntity<List<JobApplications>> getAllAppliedJobsById(@PathVariable Long jobseekerId)
 			throws JobSeekerIdNotFoundException, JobNotFoundException {

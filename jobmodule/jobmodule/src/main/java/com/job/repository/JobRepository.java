@@ -11,10 +11,12 @@ import com.job.entity.Job;
 @Repository
 public interface JobRepository extends JpaRepository<Job, Long> {
 
+	
+//Query to get filtered jobs with criteria - workingArea , jobLocation, workingExperience
+	
 	@Query("SELECT j FROM Job j WHERE (:workingArea IS NULL OR j.workingArea = :workingArea) "
 			+ "AND (:jobLocation IS NULL OR j.jobLocation=:jobLocation)"
-			+ "AND (:requiredSkill IS NULL OR j.requiredSkill=:requiredSkill)"
 			+ " AND (:workingExperience IS NULL OR j.workingExperience <= :workingExperience)")
-	List<Job> findJobsByCriteria(String workingArea, Integer workingExperience, String jobLocation, String requiredSkill);
+	List<Job> findJobsByCriteria(String workingArea, Integer workingExperience, String jobLocation);
 
 }

@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.FieldError;
@@ -40,6 +41,14 @@ public class GlobalExceptionHandler {
 		ApiResponse response = new ApiResponse(exception.getMessage(),404);
 		return new ResponseEntity<ApiResponse>(response, HttpStatus.NOT_FOUND);
 	}
+	
+	@ExceptionHandler(DataIntegrityViolationException.class)
+	public ResponseEntity<ApiResponse> handleDataIntegrityViolationException(DataIntegrityViolationException exception){
+		ApiResponse response = new ApiResponse(exception.getMessage(),404);
+		return new ResponseEntity<ApiResponse>(response, HttpStatus.NOT_FOUND);
+	}
+	
+	// Exception handler for bean validations
 	
 	@ExceptionHandler(MethodArgumentNotValidException.class)
 	public ResponseEntity<ApiResponse> handleMethodArgumentNotValidException(MethodArgumentNotValidException exception){

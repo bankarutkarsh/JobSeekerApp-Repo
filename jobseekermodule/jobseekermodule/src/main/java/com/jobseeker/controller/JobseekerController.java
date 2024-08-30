@@ -30,6 +30,8 @@ public class JobseekerController {
 
 	Logger logger = LoggerFactory.getLogger(JobseekerController.class);
 
+	// Controller Mapping for creating a new jobSeeker profile
+	
 	@PostMapping
 	public ResponseEntity<ApiResponse> addJobseeker(@Valid @RequestBody JobSeeker jobseeker) {
 		logger.info("----------------------------------------------");
@@ -40,6 +42,8 @@ public class JobseekerController {
 		return new ResponseEntity<ApiResponse>(response, HttpStatus.OK);
 	}
 
+	// Controller Mapping for updating a existing jobSeeker profile
+	
 	@PatchMapping("/update")
 	public ResponseEntity<ApiResponse> updateJobseekerProfile(@Valid @RequestBody JobSeekerBean jobseeker) throws JobSeekerIdNotFoundException {
 		logger.info("----------------------------------------------");

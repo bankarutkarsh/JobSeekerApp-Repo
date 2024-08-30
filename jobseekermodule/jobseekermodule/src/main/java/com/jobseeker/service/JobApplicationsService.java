@@ -35,38 +35,45 @@ public class JobApplicationsService {
 
 	Logger logger = LoggerFactory.getLogger(JobApplicationsService.class);
 	
+	// Service layer method for applying to a job
+	
 	@Transactional
 	public void applyToJob(ParamsBean bean) throws JobSeekerIdNotFoundException, JobNotFoundException,
 			JobDeadLinePassedException, JobNotAppliedException {
+		
+		// Checking jobSeeker id valid or not
 		JobSeeker jobseeker = jobseekerRepository.findById(bean.getJobseekerId()).orElse(null);
 		if (jobseeker == null) {
 			logger.error("No jobseeker profile found for jobseekerId : " + bean.getJobseekerId());
 			throw new JobSeekerIdNotFoundException("No jobseeker profile found for jobseekerId : " + bean.getJobseekerId());
 		}
-		JobBean job = restTemplate.getForObject("http://localhost:8081/app1/job/" + bean.getJobId(), JobBean.class);
-
+		
+		// Checking job id is valid or not
+		JobBean job = restTemplate.getForObject("http://APIGATEWAYAPP/app1/job/" + bean.getJobId(), JobBean.class);
 		if (job == null) {
 			logger.error("No job found for jobId : " + bean.getJobId());
 			throw new JobNotFoundException("No job found for jobId : " + bean.getJobId());
 		}
 		
+		// Checking if job seeker has already applied for this job
+				for(JobApplications j : jobseeker.getAppliedJobs())
+					if(j.getJobId() == bean.getJobId()) {
+						logger.error("You have already applied for this job");
+						throw new JobNotAppliedException("You have already applied for this job");
+					}
+		
+		// Checking application is open or deadline has crossed
 		if (job.getApplicationDeadline().isBefore(LocalDate.now())) {
 			logger.error("Cannot apply as application Deadline is crossed");
 			throw new JobDeadLinePassedException("Sorry, cannot apply as application Deadline is crossed");
 		}
 			
+		// Checking work experience for job is satisfied by job seeker
 		if (job.getWorkingExperience() > jobseeker.getExperience()) {
 			logger.error("Job not applied as experience criteria failed");
 			throw new JobNotAppliedException("Experience required for job : " + job.getWorkingExperience()
 					+ " years does not match your experience : " + jobseeker.getExperience() + " years.");
 		}
-			
-		for(JobApplications j : jobseeker.getAppliedJobs())
-			if(j.getJobId() == bean.getJobId()) {
-				logger.error("You have already applied for this job");
-				throw new JobNotAppliedException("You have already applied for this job");
-			}
-		
 
 		JobApplications jobApplication = new JobApplications();
 
@@ -83,6 +90,8 @@ public class JobApplicationsService {
 		logger.info("Successfully applied for the job = {} "+job);
 	}
 
+	// Service layer method for getting all applied jobs with jobSeeker id
+	
 	public List<JobApplications> getAllAppliedJobsById(Long jobseekerId)
 			throws JobSeekerIdNotFoundException, JobNotFoundException {
 		JobSeeker jobseeker = jobseekerRepository.findById(jobseekerId).orElse(null);

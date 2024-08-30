@@ -24,11 +24,11 @@ public class JobSeekerBean {
 	@Size(max = 20, message = "Length should be 0-20 characters")
 	private String addressCity;
 	private String education;
-	@PositiveOrZero
+	@PositiveOrZero(message = "Can be positive or zero")
 	private Integer experience;
-	@PositiveOrZero
+	@PositiveOrZero(message = "Can be positive or zero")
 	private Long currentSalary;
-	@Positive
+	@Positive(message = "must be a positive value")
 	private Long expectedSalary;
 	
 	private String skills;
