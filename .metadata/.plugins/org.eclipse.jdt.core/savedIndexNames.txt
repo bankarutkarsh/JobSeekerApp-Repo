@@ -238,7 +238,6 @@ INDEX VERSION 1.134+D:\Wipro Capstone Project\JobSeekerApp\.metadata\.plugins\or
 615343697.index
 2621683469.index
 274246960.index
-569077210.index
 519385429.index
 2149574146.index
 1116195385.index

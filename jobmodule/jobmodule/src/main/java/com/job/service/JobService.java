@@ -47,7 +47,7 @@ public class JobService {
 			logger.error("No Job found for applied criteria");
 			throw new JobNotFoundException("No Job found for applied criteria");
 		}
-		
+		if(requiredSkill !=null) {
 		// filter according to job skills
 		List<String> reqSkills = Arrays.asList(requiredSkill.toLowerCase().split(", "));
 		List<Job> filteredJobs = new ArrayList<Job>();
@@ -62,6 +62,8 @@ public class JobService {
 //				.contains(requiredSkill.toLowerCase())).collect(Collectors.toList());
 		logger.info("Matching jobs = {}", jobs);
 		return filteredJobs;
+		}
+		return jobs;
 	}
 
 	// Service Method for adding new job
